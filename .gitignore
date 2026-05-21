@@ -1,0 +1,23 @@
+# Dependency folders
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+dist/
+server/dist/
+client/dist/
+
+# IDE files and OS caches
+.DS_Store
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+
+# Environment local parameters
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
