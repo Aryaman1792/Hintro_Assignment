@@ -1,6 +1,7 @@
 /* client/src/utils/api.ts */
 
-const BASE_URL = "http://localhost:3001";
+// const BASE_URL = "http://localhost:3001";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 /**
  * Perform a generic fetch call with specified user header and handles base configurations
