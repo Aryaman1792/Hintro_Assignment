@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import type { CallSession } from "../utils/api";
 import { formatDateGroupHeader, formatCallTime } from "../utils/formatters";
-import { Calendar, MoreVertical, Play, Trash2, ShieldAlert } from "lucide-react";
+import { Calendar, MoreVertical, Play, Trash2 } from "lucide-react";
 
 interface CallHistoryProps {
   calls: CallSession[];

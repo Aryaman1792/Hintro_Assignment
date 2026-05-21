@@ -9,7 +9,7 @@ import { LogoutModal } from "./components/LogoutModal";
 import { FeedbackModal } from "./components/FeedbackModal";
 import { FeedbackHistoryModal } from "./components/FeedbackHistoryModal";
 import { formatDuration, formatRelativeDate } from "./utils/formatters";
-import { Plus, ShieldAlert, Sparkles, RefreshCw } from "lucide-react";
+import { Plus, ShieldAlert, RefreshCw } from "lucide-react";
 
 // CSS files import
 import "./styles/theme.css";

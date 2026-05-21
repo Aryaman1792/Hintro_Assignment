@@ -1,5 +1,5 @@
 /* client/src/components/FeedbackModal.tsx */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useUser } from "../context/UserContext";
 import { X, Star, CheckCircle } from "lucide-react";
 

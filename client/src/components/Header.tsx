@@ -1,7 +1,7 @@
 /* client/src/components/Header.tsx */
 import React, { useState, useRef, useEffect } from "react";
 import { useUser } from "../context/UserContext";
-import { Menu, Play, ChevronDown, LogOut, User } from "lucide-react";
+import { Menu, Play, ChevronDown, LogOut } from "lucide-react";
 
 interface HeaderProps {
   onMenuToggle: () => void;
@@ -75,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
                 {profile?.email}
               </div>
             </div>
-            
+
             <button
               className="profile-dropdown-item danger"
               onClick={() => {
