@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite
+
+⚠️ The backend is hosted on Render's free tier and may take 20–30 seconds to respond on first load after inactivity.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

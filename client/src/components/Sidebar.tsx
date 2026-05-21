@@ -66,7 +66,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <span>Knowledge Base</span>
             </div>
             <div className="sidebar-badge-chevron">
-              <X size={12} style={{ opacity: 0 }} />
             </div>
           </div>
 

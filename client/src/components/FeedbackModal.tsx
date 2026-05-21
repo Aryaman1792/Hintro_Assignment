@@ -64,7 +64,7 @@ export const FeedbackModal: React.FC = () => {
   return (
     <>
       <div className="modal-backdrop">
-        <form className="modal-container" onSubmit={handleSubmit}>
+        <div className="modal-container">
           {/* Header */}
           <div className="modal-header">
             <div className="modal-title">Send us Feedback</div>
@@ -149,11 +149,15 @@ export const FeedbackModal: React.FC = () => {
             >
               Cancel
             </button>
-            <button type="submit" className="btn-modal-submit">
+            <button
+              type="button"
+              className="btn-modal-submit"
+              onClick={handleSubmit}
+            >
               Submit Feedback
             </button>
           </div>
-        </form>
+        </div>
       </div>
 
       {/* Success Toast Overlay Alert */}
