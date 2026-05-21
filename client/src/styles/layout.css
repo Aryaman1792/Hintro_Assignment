@@ -1,0 +1,194 @@
+/* client/src/styles/layout.css */
+
+/* App Container */
+.app-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg-primary);
+  position: relative;
+}
+
+/* Sidebar Wrapper */
+.sidebar-wrapper {
+  background-color: var(--color-bg-secondary);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: var(--spacing-lg) var(--spacing-md);
+  z-index: 100;
+  transition: transform var(--transition-normal);
+}
+
+/* Main Area Layout */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Top Header */
+.header-wrapper {
+  height: 72px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
+  background-color: var(--color-bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+/* Page Content Container */
+.content-container {
+  flex: 1;
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Stats Cards Grid Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Recent Calls Layout */
+.recent-calls-section {
+  margin-top: var(--spacing-xl);
+}
+
+.recent-calls-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Empty Call Log Center Card */
+.empty-calls-card {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  text-align: center;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 760px;
+  margin: 0 auto;
+  min-height: 280px;
+}
+
+/* Mobile Sidebar Drawer Overlay background */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 95;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.mobile-overlay.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile Header Hamburger Trigger */
+.mobile-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet & Smaller Layout (up to 1024px) */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Layout (up to 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr; /* Stack layout vertically */
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-overlay);
+    z-index: 100;
+  }
+
+  .sidebar-wrapper.active {
+    transform: translateX(0);
+  }
+
+  .header-wrapper {
+    padding: 0 var(--spacing-md);
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .header-title-container {
+    flex: 1;
+    text-align: center;
+  }
+
+  .content-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+/* Extra Small Devices (up to 480px) */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
